@@ -1,0 +1,5 @@
+**/vendor
+**/Generated
+caches
+routers/riaf/src/Router.php
+.idea

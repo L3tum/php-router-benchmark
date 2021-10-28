@@ -1,0 +1,13 @@
+{
+  "require": {
+    "phpbench/phpbench": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Benchmark\\": "benchmark/"
+    },
+    "classmap": [
+      "routers/riaf/Config.php"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "require": {
+    "symfony/routing": "^5.3",
+    "symfony/config": "^5.3"
+  }
+}
