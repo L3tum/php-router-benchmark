@@ -16,7 +16,7 @@ clean:
 	cd routers/symfony && rm -rf vendor
 	cd routers/altorouter && rm -rf vendor
 
-vendor: routers/riaf/vendor routers/symfony/vendor routers/fastroute/vendor routers/autoroute/vendor routers/altorouter/vendor
+vendor: routers/riaf/vendor routers/symfony/vendor routers/fastroute/vendor routers/autoroute/vendor routers/altorouter/vendor routers/bramus/vendor
 	composer install
 
 routers/riaf/vendor:
@@ -30,6 +30,9 @@ routers/fastroute/vendor:
 
 routers/altorouter/vendor:
 	cd routers/altorouter && composer install
+
+routers/bramus/vendor:
+	cd routers/bramus && composer install
 
 routers/autoroute/vendor:
 	cd routers/autoroute && composer install
@@ -48,6 +51,7 @@ integration-autoloaders:
 	cd routers/fastroute && composer dump-autoload -o -a
 	cd routers/autoroute && composer dump-autoload -o -a
 	cd routers/altorouter && composer dump-autoload -o -a
+	cd routers/bramus && composer dump-autoload -o -a
 
 .PHONY: benchmark
 benchmark:
@@ -88,3 +92,7 @@ update-autoroute:
 .PHONY: update-altorouter
 update-altorouter:
 	cd routers/altorouter && composer update
+
+.PHONY: update-bramus
+update-bramus:
+	cd routers/bramus && composer update

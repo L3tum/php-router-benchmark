@@ -13,6 +13,19 @@
 | AltoRouterBench | Dynamic Worst Case   | 1000 | 100 | 884.720kb | 9.823μs |
 ````
 
+## BramusRouter
+
+````
+| benchmark         | set                  | revs | its | mem_peak  | mode    |
++-------------------+----------------------+------+-----+-----------+---------+
+| BramusRouterBench | Static Best Case     | 1000 | 100 | 884.880kb | 4.247μs |
+| BramusRouterBench | Static Average Case  | 1000 | 100 | 884.880kb | 4.254μs |
+| BramusRouterBench | Static Worst Case    | 1000 | 100 | 884.880kb | 4.253μs |
+| BramusRouterBench | Dynamic Best Case    | 1000 | 100 | 884.888kb | 4.243μs |
+| BramusRouterBench | Dynamic Average Case | 1000 | 100 | 884.888kb | 4.282μs |
+| BramusRouterBench | Dynamic Worst Case   | 1000 | 100 | 884.888kb | 4.312μs |
+````
+
 ## Symfony
 
 ````
