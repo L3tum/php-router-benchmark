@@ -7,3 +7,4 @@ require_once dirname(__DIR__) . '/routers/riaf/vendor/autoload.php';
 require_once dirname(__DIR__) . '/routers/symfony/vendor/autoload.php';
 require_once dirname(__DIR__) . '/routers/fastroute/vendor/autoload.php';
 require_once dirname(__DIR__) . '/routers/autoroute/vendor/autoload.php';
+require_once dirname(__DIR__) . '/routers/altorouter/vendor/autoload.php';

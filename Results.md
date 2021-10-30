@@ -1,5 +1,7 @@
 # Riaf-Router: (Likely) The fastest router
 
+(You can find some more Routers benchmarked [here](Routers.md))
+
 ## Motivation
 
 I'm sure you'll ask yourself: Why? Why do we need another router? We have the symfony router for flexibility and fastroute for the speed. What's where to gain?
