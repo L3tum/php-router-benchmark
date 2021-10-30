@@ -30,7 +30,7 @@ class FastRouteBench extends AbstractRouter
     public function benchStaticRoutes(array $params): void
     {
         $result = $this->dispatcher->dispatch('GET', $params['route']);
-        assert($result['handler'] !== null);
+        assert($result[0] === Dispatcher::FOUND);
     }
 
     #[ParamProviders("provideDynamicRoutes")]
@@ -38,6 +38,6 @@ class FastRouteBench extends AbstractRouter
     public function benchDynamicRoutes(array $params): void
     {
         $result = $this->dispatcher->dispatch('GET', $params['route']);
-        assert($result['handler'] !== null);
+        assert($result[0] === Dispatcher::FOUND);
     }
 }

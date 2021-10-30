@@ -1,7 +1,7 @@
 all: prepare benchmark
 
 .PHONY: prepare
-prepare: vendor autoloader clean routers/riaf/src/Generated images/Router.php integration-autoloaders
+prepare: vendor autoloader clean routers/riaf/src/Generated routers/riaf/src/Router.php integration-autoloaders
 
 vendor: routers/riaf/vendor routers/symfony/vendor routers/fastroute/vendor
 	composer install
