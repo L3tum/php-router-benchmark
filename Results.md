@@ -27,19 +27,6 @@ because that was the first thing we got rid of for Victoria. And it paid off.
 
 ![Image](images/Benchmark_Graph.png)
 
-### AutoRoute (removed from graph as it would dwarf any other router)
-
-````
-| benchmark      | set                  | revs | its | mem_peak  | mode     |
-+----------------+----------------------+------+-----+-----------+----------+
-| AutoRouteBench | Static Best Case     | 1000 | 100 | 1.245mb   | 11.350μs |
-| AutoRouteBench | Static Average Case  | 1000 | 100 | 1.245mb   | 11.320μs |
-| AutoRouteBench | Static Worst Case    | 1000 | 100 | 1.245mb   | 11.428μs |
-| AutoRouteBench | Dynamic Best Case    | 1000 | 100 | 1.627mb   | 5.726μs  |
-| AutoRouteBench | Dynamic Average Case | 1000 | 100 | 1.667mb   | 5.663μs  |
-| AutoRouteBench | Dynamic Worst Case   | 1000 | 100 | 1.667mb   | 5.697μs  |
-````
-
 ### Symfony
 
 ````
