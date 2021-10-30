@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "l3tum/riaf-core",
-            "version": "v1.0.17",
+            "version": "v1.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/L3tum/RiafCore.git",
-                "reference": "4c9979447b6261952d92afdf83fd235bda464c80"
+                "reference": "d6917e81493106eb589f0783e59e6d6f925d3e0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/L3tum/RiafCore/zipball/4c9979447b6261952d92afdf83fd235bda464c80",
-                "reference": "4c9979447b6261952d92afdf83fd235bda464c80",
+                "url": "https://api.github.com/repos/L3tum/RiafCore/zipball/d6917e81493106eb589f0783e59e6d6f925d3e0e",
+                "reference": "d6917e81493106eb589f0783e59e6d6f925d3e0e",
                 "shasum": ""
             },
             "require": {
@@ -29,7 +29,7 @@
                 "psr/http-message": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "psr/http-server-middleware": "^1.0",
-                "psr/log": "^1.1"
+                "psr/log": "^3.0"
             },
             "require-dev": {
                 "ext-xdebug": "*",
@@ -63,9 +63,9 @@
             "description": "Good framework",
             "support": {
                 "issues": "https://github.com/L3tum/RiafCore/issues",
-                "source": "https://github.com/L3tum/RiafCore/tree/v1.0.17"
+                "source": "https://github.com/L3tum/RiafCore/tree/v1.0.18"
             },
-            "time": "2021-10-26T12:48:39+00:00"
+            "time": "2021-10-30T13:09:49+00:00"
         },
         {
             "name": "nyholm/psr7",
@@ -591,30 +591,30 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.4",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
-                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=8.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
+                    "Psr\\Log\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -635,9 +635,9 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.4"
+                "source": "https://github.com/php-fig/log/tree/3.0.0"
             },
-            "time": "2021-05-03T11:20:27+00:00"
+            "time": "2021-07-14T16:46:02+00:00"
         }
     ],
     "packages-dev": [],

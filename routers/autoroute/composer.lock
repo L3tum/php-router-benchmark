@@ -1,0 +1,120 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "bd4590253b0a88ef23abf74f27772390",
+    "packages": [
+        {
+            "name": "pmjones/auto-route",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmjones/AutoRoute.git",
+                "reference": "8f5afdd1d07a8f614c590da0baa10581a8b50733"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmjones/AutoRoute/zipball/8f5afdd1d07a8f614c590da0baa10581a8b50733",
+                "reference": "8f5afdd1d07a8f614c590da0baa10581a8b50733",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0",
+                "psr/log": "^3.0"
+            },
+            "require-dev": {
+                "pds/skeleton": "^1.0",
+                "phpstan/phpstan": "^0.12.82",
+                "phpunit/phpunit": "^9.0"
+            },
+            "bin": [
+                "bin/autoroute-dump.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AutoRoute\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Automatically routes HTTP request to action classes.",
+            "homepage": "http://github.com/pmjones/auto-route",
+            "keywords": [
+                "action",
+                "adr",
+                "route",
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/pmjones/AutoRoute/issues",
+                "source": "https://github.com/pmjones/AutoRoute/tree/2.0.0"
+            },
+            "time": "2021-08-25T20:31:15+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/3.0.0"
+            },
+            "time": "2021-07-14T16:46:02+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

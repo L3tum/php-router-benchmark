@@ -5,13 +5,14 @@ namespace Benchmark;
 use PhpBench\Attributes\BeforeMethods;
 use PhpBench\Attributes\ParamProviders;
 use Symfony\Component\Routing\Loader\ClosureLoader;
+use Symfony\Component\Routing\Matcher\UrlMatcherInterface;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Router;
 
 class SymfonyBench extends AbstractRouter
 {
-    private Router $router;
+    private UrlMatcherInterface $router;
 
     public function getRouter(): void
     {
@@ -27,7 +28,8 @@ class SymfonyBench extends AbstractRouter
             return $collection;
         };
 
-        $this->router = new Router(new ClosureLoader(), $resource, ['cache_dir' => dirname(__DIR__) . '/caches']);
+        // Symfony does GET by default
+        $this->router = (new Router(new ClosureLoader(), $resource, ['cache_dir' => dirname(__DIR__) . '/caches']))->getMatcher();
     }
 
     #[ParamProviders("provideStaticRoutes")]

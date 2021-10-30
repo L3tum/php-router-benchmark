@@ -1,0 +1,11 @@
+{
+  "require": {
+    "pmjones/auto-route": "^2.0"
+  },
+  "psr-4": {
+    "AutoRoute\\": "src/"
+  },
+  "scripts": {
+    "generate": "php ./generate_routes.php"
+  }
+}

@@ -3,3 +3,5 @@
 caches
 routers/riaf/src/Router.php
 .idea
+/routers/autoroute/resources/
+/routers/autoroute/src/
