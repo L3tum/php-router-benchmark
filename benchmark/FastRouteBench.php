@@ -5,9 +5,11 @@ namespace Benchmark;
 use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
 use PhpBench\Attributes\BeforeMethods;
+use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
 use function FastRoute\cachedDispatcher;
 
+#[Groups(["RouterBenchmark"])]
 class FastRouteBench extends AbstractRouter
 {
     private Dispatcher $dispatcher;

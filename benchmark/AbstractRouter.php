@@ -4,7 +4,6 @@ namespace Benchmark;
 
 use Generator;
 use PhpBench\Attributes\BeforeMethods;
-use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\Iterations;
 use PhpBench\Attributes\ParamProviders;
 use PhpBench\Attributes\Revs;
@@ -12,7 +11,6 @@ use Psr\Container\ContainerInterface;
 
 #[Iterations(100)]
 #[Revs(1000)]
-#[Groups(["RouterBenchmark"])]
 abstract class AbstractRouter
 {
     protected ContainerInterface $container;

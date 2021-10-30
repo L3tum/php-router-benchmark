@@ -27,17 +27,30 @@ because that was the first thing we got rid of for Victoria. And it paid off.
 
 ![Image](images/Benchmark_Graph.png)
 
+### AutoRoute (removed from graph as it would dwarf any other router)
+
+````
+| benchmark      | set                  | revs | its | mem_peak  | mode     |
++----------------+----------------------+------+-----+-----------+----------+
+| AutoRouteBench | Static Best Case     | 1000 | 100 | 1.245mb   | 11.350μs |
+| AutoRouteBench | Static Average Case  | 1000 | 100 | 1.245mb   | 11.320μs |
+| AutoRouteBench | Static Worst Case    | 1000 | 100 | 1.245mb   | 11.428μs |
+| AutoRouteBench | Dynamic Best Case    | 1000 | 100 | 1.627mb   | 5.726μs  |
+| AutoRouteBench | Dynamic Average Case | 1000 | 100 | 1.667mb   | 5.663μs  |
+| AutoRouteBench | Dynamic Worst Case   | 1000 | 100 | 1.667mb   | 5.697μs  |
+````
+
 ### Symfony
 
 ````
 | benchmark      | set                  | revs | its | mem_peak  | mode    |
 +----------------+----------------------+------+-----+-----------+---------+
-| SymfonyBench   | Static Best Case     | 1000 | 100 | 953.728kb | 1.656μs |
-| SymfonyBench   | Static Average Case  | 1000 | 100 | 888.800kb | 1.670μs |
-| SymfonyBench   | Static Worst Case    | 1000 | 100 | 888.800kb | 1.641μs |
-| SymfonyBench   | Dynamic Best Case    | 1000 | 100 | 888.808kb | 2.041μs |
-| SymfonyBench   | Dynamic Average Case | 1000 | 100 | 888.808kb | 2.094μs |
-| SymfonyBench   | Dynamic Worst Case   | 1000 | 100 | 888.808kb | 2.107μs |
+| SymfonyBench   | Static Best Case     | 1000 | 100 | 953.728kb | 0.264μs |
+| SymfonyBench   | Static Average Case  | 1000 | 100 | 888.800kb | 0.280μs |
+| SymfonyBench   | Static Worst Case    | 1000 | 100 | 888.800kb | 0.273μs |
+| SymfonyBench   | Dynamic Best Case    | 1000 | 100 | 888.808kb | 0.674μs |
+| SymfonyBench   | Dynamic Average Case | 1000 | 100 | 888.808kb | 0.680μs |
+| SymfonyBench   | Dynamic Worst Case   | 1000 | 100 | 888.808kb | 0.686μs |
 ````
 
 ### FastRoute
@@ -125,8 +138,8 @@ Below are the best/worst cases of each router, for both static and dynamic route
 ````
 | benchmark      | set                  | revs | its | mem_peak  | mode    |
 +----------------+----------------------+------+-----+-----------+---------+
-| SymfonyBench   | Static Best Case     | 1000 | 100 | 953.728kb | 1.656μs |
-| SymfonyBench   | Static Worst Case    | 1000 | 100 | 888.800kb | 1.641μs |
+| SymfonyBench   | Static Best Case     | 1000 | 100 | 953.728kb | 0.264μs |
+| SymfonyBench   | Static Worst Case    | 1000 | 100 | 888.800kb | 0.273μs |
 | FastRouteBench | Static Best Case     | 1000 | 100 | 888.808kb | 0.103μs |
 | FastRouteBench | Static Worst Case    | 1000 | 100 | 888.808kb | 0.092μs |
 | RiafBench      | Static Best Case     | 1000 | 100 | 888.800kb | 0.043μs |
@@ -137,8 +150,8 @@ Below are the best/worst cases of each router, for both static and dynamic route
 ````
 | benchmark      | set                  | revs | its | mem_peak  | mode    |
 +----------------+----------------------+------+-----+-----------+---------+
-| SymfonyBench   | Dynamic Best Case    | 1000 | 100 | 888.808kb | 2.041μs |
-| SymfonyBench   | Dynamic Worst Case   | 1000 | 100 | 888.808kb | 2.107μs |
+| SymfonyBench   | Dynamic Best Case    | 1000 | 100 | 888.808kb | 0.674μs |
+| SymfonyBench   | Dynamic Worst Case   | 1000 | 100 | 888.808kb | 0.686μs |
 | FastRouteBench | Dynamic Best Case    | 1000 | 100 | 888.816kb | 0.419μs |
 | FastRouteBench | Dynamic Worst Case   | 1000 | 100 | 888.816kb | 0.507μs |
 | RiafBench      | Dynamic Best Case    | 1000 | 100 | 888.808kb | 0.260μs |
@@ -149,8 +162,8 @@ Below are the best/worst cases of each router, for both static and dynamic route
 ````
 | benchmark      | set                  | revs | its | mem_peak  | mode    |
 +----------------+----------------------+------+-----+-----------+---------+
-| SymfonyBench   | Static Best Case     | 1000 | 100 | 1.608mb   | 1.933μs |
-| SymfonyBench   | Static Worst Case    | 1000 | 100 | 1.097mb   | 2.049μs |
+| SymfonyBench   | Static Best Case     | 1000 | 100 | 1.608mb   | 0.271μs |
+| SymfonyBench   | Static Worst Case    | 1000 | 100 | 1.097mb   | 0.277μs |
 | FastRouteBench | Static Best Case     | 1000 | 100 | 888.808kb | 0.107μs |
 | FastRouteBench | Static Worst Case    | 1000 | 100 | 888.816kb | 0.095μs |
 | RiafBench      | Static Best Case     | 1000 | 100 | 1.889mb   | 0.043μs |
@@ -161,8 +174,8 @@ Below are the best/worst cases of each router, for both static and dynamic route
 ````
 | benchmark      | set                  | revs | its | mem_peak  | mode    |
 +----------------+----------------------+------+-----+-----------+---------+
-| SymfonyBench   | Dynamic Best Case    | 1000 | 100 | 1.097mb   | 2.635μs |
-| SymfonyBench   | Dynamic Worst Case   | 1000 | 100 | 1.097mb   | 2.710μs |
+| SymfonyBench   | Dynamic Best Case    | 1000 | 100 | 1.097mb   | 0.823μs |
+| SymfonyBench   | Dynamic Worst Case   | 1000 | 100 | 1.097mb   | 0.869μs |
 | FastRouteBench | Dynamic Best Case    | 1000 | 100 | 888.816kb | 0.434μs |
 | FastRouteBench | Dynamic Worst Case   | 1000 | 100 | 888.824kb | 1.597μs |
 | RiafBench      | Dynamic Best Case    | 1000 | 100 | 1.889mb   | 0.264μs |
@@ -173,8 +186,8 @@ Below are the best/worst cases of each router, for both static and dynamic route
 ````
 | benchmark      | set                  | revs | its | mem_peak  | mode    |
 +----------------+----------------------+------+-----+-----------+---------+
-| SymfonyBench   | Static Best Case     | 1000 | 100 | 6.249mb   | 5.505μs |
-| SymfonyBench   | Static Worst Case    | 1000 | 100 | 6.249mb   | 6.990μs |
+| SymfonyBench   | Static Best Case     | 1000 | 100 | 6.249mb   | 0.273μs |
+| SymfonyBench   | Static Worst Case    | 1000 | 100 | 6.249mb   | 0.278μs |
 | FastRouteBench | Static Best Case     | 1000 | 100 | 2.350mb   | 0.106μs |
 | FastRouteBench | Static Worst Case    | 1000 | 100 | 2.350mb   | 0.093μs |
 | RiafBench      | Static Best Case     | 1000 | 100 | 14.607mb  | 0.044μs |
@@ -185,8 +198,8 @@ Below are the best/worst cases of each router, for both static and dynamic route
 ````
 | benchmark      | set                  | revs | its | mem_peak  | mode     |
 +----------------+----------------------+------+-----+-----------+----------+
-| SymfonyBench   | Dynamic Best Case    | 1000 | 100 | 6.249mb   | 8.874μs  |
-| SymfonyBench   | Dynamic Worst Case   | 1000 | 100 | 6.249mb   | 9.285μs  |
+| SymfonyBench   | Dynamic Best Case    | 1000 | 100 | 6.249mb   | 2.517μs  |
+| SymfonyBench   | Dynamic Worst Case   | 1000 | 100 | 6.249mb   | 2.700μs  |
 | FastRouteBench | Dynamic Best Case    | 1000 | 100 | 2.350mb   | 0.427μs  |
 | FastRouteBench | Dynamic Worst Case   | 1000 | 100 | 2.350mb   | 13.860μs |
 | RiafBench      | Dynamic Best Case    | 1000 | 100 | 14.607mb  | 0.275μs  |

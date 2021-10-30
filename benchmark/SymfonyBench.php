@@ -3,6 +3,7 @@
 namespace Benchmark;
 
 use PhpBench\Attributes\BeforeMethods;
+use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
 use Symfony\Component\Routing\Loader\ClosureLoader;
 use Symfony\Component\Routing\Matcher\UrlMatcherInterface;
@@ -10,6 +11,7 @@ use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Router;
 
+#[Groups(["RouterBenchmark"])]
 class SymfonyBench extends AbstractRouter
 {
     private UrlMatcherInterface $router;

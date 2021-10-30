@@ -3,9 +3,11 @@
 namespace Benchmark;
 
 use PhpBench\Attributes\BeforeMethods;
+use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
 use Riaf\Router;
 
+#[Groups(["RouterBenchmark"])]
 class RiafBench extends AbstractRouter
 {
     private Router $router;
