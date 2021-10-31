@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Router;
 
-#[Groups(["RouterBenchmark"])]
+#[Groups(["RouterBenchmark", "Router"])]
 class SymfonyBench extends AbstractRouter
 {
     private UrlMatcherInterface $router;

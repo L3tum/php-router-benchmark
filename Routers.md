@@ -26,6 +26,19 @@
 | BramusRouterBench | Dynamic Worst Case   | 1000 | 100 | 884.888kb | 4.312μs |
 ````
 
+## Mezon
+
+````
+| benchmark      | set                  | revs | its | mem_peak  | mode    |
++----------------+----------------------+------+-----+-----------+---------+
+| MezonBench     | Static Best Case     | 1000 | 100 | 884.984kb | 0.163μs |
+| MezonBench     | Static Average Case  | 1000 | 100 | 884.992kb | 0.160μs |
+| MezonBench     | Static Worst Case    | 1000 | 100 | 884.992kb | 0.160μs |
+| MezonBench     | Dynamic Best Case    | 1000 | 100 | 884.992kb | 3.227μs |
+| MezonBench     | Dynamic Average Case | 1000 | 100 | 884.992kb | 3.647μs |
+| MezonBench     | Dynamic Worst Case   | 1000 | 100 | 885.000kb | 4.041μs |
+````
+
 ## Symfony
 
 ````

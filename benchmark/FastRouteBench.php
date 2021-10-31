@@ -9,7 +9,7 @@ use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
 use function FastRoute\cachedDispatcher;
 
-#[Groups(["RouterBenchmark"])]
+#[Groups(["RouterBenchmark", "Router"])]
 class FastRouteBench extends AbstractRouter
 {
     private Dispatcher $dispatcher;

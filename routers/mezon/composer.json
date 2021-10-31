@@ -1,0 +1,5 @@
+{
+  "require": {
+    "mezon/router": "^1.3"
+  }
+}

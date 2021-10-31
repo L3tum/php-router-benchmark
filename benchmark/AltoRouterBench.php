@@ -4,8 +4,10 @@ namespace Benchmark;
 
 use AltoRouter;
 use PhpBench\Attributes\BeforeMethods;
+use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
 
+#[Groups(["Router"])]
 class AltoRouterBench extends AbstractRouter
 {
     private AltoRouter $router;

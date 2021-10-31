@@ -7,7 +7,7 @@ use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
 use Riaf\Router;
 
-#[Groups(["RouterBenchmark"])]
+#[Groups(["RouterBenchmark", "Router"])]
 class RiafBench extends AbstractRouter
 {
     private Router $router;

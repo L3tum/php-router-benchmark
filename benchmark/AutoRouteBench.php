@@ -5,6 +5,7 @@ namespace Benchmark;
 use AutoRoute\AutoRoute;
 use AutoRoute\Router;
 use PhpBench\Attributes\BeforeMethods;
+use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
 
 /**
@@ -18,6 +19,7 @@ use PhpBench\Attributes\ParamProviders;
  * | AutoRouteBench | Dynamic Average Case | 1000 | 100 | 1.667mb   | 5.663μs  |
  * | AutoRouteBench | Dynamic Worst Case   | 1000 | 100 | 1.667mb   | 5.697μs  |
  */
+#[Groups(["Router"])]
 class AutoRouteBench extends AbstractRouter
 {
     private Router $router;
@@ -29,6 +31,8 @@ class AutoRouteBench extends AbstractRouter
             dirname(__DIR__) . '/routers/autoroute/src',
             // You cannot actually assign a LoggerInterface to AutoRoute since it expects a Logger (AutoRoute's own definition)
         ))->getRouter();
+        // Try building it up first?
+        $this->router->route('GET', '/static0');
     }
 
     #[ParamProviders("provideStaticRoutes")]

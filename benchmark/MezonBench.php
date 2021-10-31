@@ -2,13 +2,13 @@
 
 namespace Benchmark;
 
-use Bramus\Router\Router;
+use Mezon\Router\Router;
 use PhpBench\Attributes\BeforeMethods;
 use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
 
-#[Groups(["Router"])]
-class BramusRouterBench extends AbstractRouter
+#[Groups(["RouterBenchmark", "Router"])]
+class MezonBench extends AbstractRouter
 {
     private Router $router;
 
@@ -17,13 +17,10 @@ class BramusRouterBench extends AbstractRouter
         $router = new Router();
         $iterations = !empty(getenv('ROUTES')) ? getenv('ROUTES') : 100;
         for ($i = 0; $i < $iterations; $i++) {
-            $router->get('/static' . $i, static function () {
-                return 'bramus::static';
-            });
-            $router->get('/dynamic' . $i . '/(\d+)', static function () {
-                return 'bramus::dynamic';
-            });
+            $router->addRoute('/static' . $i, 'mezon::static', 'GET');
+            $router->addRoute('/dynamic' . $i . '/[i:id]', 'mezon::dynamic', 'GET');
         }
+        $router->warmCache();
         $this->router = $router;
     }
 
@@ -31,21 +28,17 @@ class BramusRouterBench extends AbstractRouter
     #[BeforeMethods("getRouter")]
     public function benchStaticRoutes(array $params): void
     {
-        // Not the best one to benchmark...
         $_SERVER['REQUEST_METHOD'] = 'GET';
-        $_SERVER['REQUEST_URI'] = $params['route'];
-        $handled = $this->router->run();
-        assert($handled);
+        $callback = $this->router->getCallback($params['route']);
+        assert($callback !== false);
     }
 
     #[ParamProviders("provideDynamicRoutes")]
     #[BeforeMethods("getRouter")]
     public function benchDynamicRoutes(array $params): void
     {
-        // Not the best one to benchmark...
         $_SERVER['REQUEST_METHOD'] = 'GET';
-        $_SERVER['REQUEST_URI'] = $params['route'];
-        $handled = $this->router->run();
-        assert($handled);
+        $callback = $this->router->getCallback($params['route']);
+        assert($callback !== false);
     }
 }
