@@ -10,3 +10,4 @@ require_once dirname(__DIR__) . '/routers/autoroute/vendor/autoload.php';
 require_once dirname(__DIR__) . '/routers/altorouter/vendor/autoload.php';
 require_once dirname(__DIR__) . '/routers/bramus/vendor/autoload.php';
 require_once dirname(__DIR__) . '/routers/mezon/vendor/autoload.php';
+require_once dirname(__DIR__) . '/routers/aphiria/vendor/autoload.php';

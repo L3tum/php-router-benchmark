@@ -13,6 +13,19 @@
 | AltoRouterBench | Dynamic Worst Case   | 1000 | 100 | 884.720kb | 9.823μs |
 ````
 
+## AphiriaRouter
+
+````
+| benchmark      | set                  | revs | its | mem_peak  | mode    |
++----------------+----------------------+------+-----+-----------+---------+
+| AphiriaBench   | Static Best Case     | 1000 | 100 | 885.128kb | 0.921μs |
+| AphiriaBench   | Static Average Case  | 1000 | 100 | 885.128kb | 0.897μs |
+| AphiriaBench   | Static Worst Case    | 1000 | 100 | 885.128kb | 0.892μs |
+| AphiriaBench   | Dynamic Best Case    | 1000 | 100 | 885.136kb | 1.296μs |
+| AphiriaBench   | Dynamic Average Case | 1000 | 100 | 885.136kb | 1.299μs |
+| AphiriaBench   | Dynamic Worst Case   | 1000 | 100 | 885.136kb | 1.311μs |
+````
+
 ## BramusRouter
 
 ````
@@ -26,17 +39,17 @@
 | BramusRouterBench | Dynamic Worst Case   | 1000 | 100 | 884.888kb | 4.312μs |
 ````
 
-## Mezon
+## Mezon (Scales really badly with number of routes, 100 Routes and times shot up to 4μs)
 
 ````
 | benchmark      | set                  | revs | its | mem_peak  | mode    |
 +----------------+----------------------+------+-----+-----------+---------+
-| MezonBench     | Static Best Case     | 1000 | 100 | 884.984kb | 0.163μs |
-| MezonBench     | Static Average Case  | 1000 | 100 | 884.992kb | 0.160μs |
-| MezonBench     | Static Worst Case    | 1000 | 100 | 884.992kb | 0.160μs |
-| MezonBench     | Dynamic Best Case    | 1000 | 100 | 884.992kb | 3.227μs |
-| MezonBench     | Dynamic Average Case | 1000 | 100 | 884.992kb | 3.647μs |
-| MezonBench     | Dynamic Worst Case   | 1000 | 100 | 885.000kb | 4.041μs |
+| MezonBench     | Static Best Case     | 1000 | 100 | 885.128kb | 0.159μs |
+| MezonBench     | Static Average Case  | 1000 | 100 | 885.128kb | 0.158μs |
+| MezonBench     | Static Worst Case    | 1000 | 100 | 885.128kb | 0.158μs |
+| MezonBench     | Dynamic Best Case    | 1000 | 100 | 885.136kb | 0.582μs |
+| MezonBench     | Dynamic Average Case | 1000 | 100 | 885.136kb | 0.630μs |
+| MezonBench     | Dynamic Worst Case   | 1000 | 100 | 885.136kb | 0.675μs |
 ````
 
 ## Symfony

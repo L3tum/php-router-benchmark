@@ -17,27 +17,17 @@ clean:
 	cd routers/altorouter && rm -rf vendor
 	cd routers/bramus && rm -rf vendor
 	cd routers/mezon && rm -rf vendor
+	cd routers/aphiria && rm -rf vendor
 
-vendor: routers/riaf/vendor routers/symfony/vendor routers/fastroute/vendor routers/autoroute/vendor routers/altorouter/vendor routers/bramus/vendor routers/mezon/vendor
-	composer install
-
-routers/riaf/vendor:
+vendor: routers/autoroute/vendor
 	cd routers/riaf && composer install
-
-routers/symfony/vendor:
 	cd routers/symfony && composer install
-
-routers/fastroute/vendor:
 	cd routers/fastroute && composer install
-
-routers/altorouter/vendor:
 	cd routers/altorouter && composer install
-
-routers/bramus/vendor:
 	cd routers/bramus && composer install
-
-routers/mezon/vendor:
 	cd routers/mezon && composer install
+	cd routers/aphiria && composer install
+	composer install
 
 routers/autoroute/vendor:
 	cd routers/autoroute && composer install
@@ -58,6 +48,7 @@ integration-autoloaders:
 	cd routers/altorouter && composer dump-autoload -o -a
 	cd routers/bramus && composer dump-autoload -o -a
 	cd routers/mezon && composer dump-autoload -o -a
+	cd routers/aphiria && composer dump-autoload -o -a
 
 .PHONY: benchmark
 benchmark:
@@ -110,3 +101,7 @@ update-bramus:
 .PHONY: update-mezon
 update-mezon:
 	cd routers/mezon && composer update
+
+.PHONY: update-aphiria
+update-aphiria:
+	cd routers/aphiria && composer update

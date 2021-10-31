@@ -1,0 +1,6 @@
+{
+  "require": {
+    "aphiria/router": "v1.0.0-alpha4 as v1.0.0",
+    "aphiria/reflection": "v1.0.0-alpha4 as v1.0.0"
+  }
+}

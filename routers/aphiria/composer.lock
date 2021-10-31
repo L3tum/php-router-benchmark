@@ -1,0 +1,170 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8c91608ec04919af5b64ce967cc18215",
+    "packages": [
+        {
+            "name": "aphiria/reflection",
+            "version": "v1.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aphiria/reflection.git",
+                "reference": "8e05a606329c54a332e1f016ca4d1edbf26b7675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aphiria/reflection/zipball/8e05a606329c54a332e1f016ca4d1edbf26b7675",
+                "reference": "8e05a606329c54a332e1f016ca4d1edbf26b7675",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "2.18",
+                "phpunit/phpunit": "~9.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aphiria\\Reflection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Young",
+                    "email": "dave@aphiria.com",
+                    "role": "Architect"
+                }
+            ],
+            "description": "The Aphiria reflection library",
+            "homepage": "https://www.aphiria.com",
+            "keywords": [
+                "class finder",
+                "php",
+                "reflection"
+            ],
+            "support": {
+                "docs": "https://www.aphiria.com/docs/1.x/introduction.html",
+                "forum": "https://github.com/aphiria/aphiria/discussions",
+                "issues": "https://github.com/aphiria/aphiria/issues",
+                "source": "https://github.com/aphiria/aphiria"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/davidbyoung",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-05-16T18:49:12+00:00"
+        },
+        {
+            "name": "aphiria/router",
+            "version": "v1.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aphiria/router.git",
+                "reference": "39d3ade823114c18806a62f08250eec2c4496841"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aphiria/router/zipball/39d3ade823114c18806a62f08250eec2c4496841",
+                "reference": "39d3ade823114c18806a62f08250eec2c4496841",
+                "shasum": ""
+            },
+            "require": {
+                "aphiria/reflection": "1.*@dev",
+                "ext-ctype": "*",
+                "ext-mbstring": "*",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "aphiria/api": "1.*@dev",
+                "friendsofphp/php-cs-fixer": "2.18",
+                "nikic/fast-route": "1.2",
+                "phpunit/phpunit": "~9.5",
+                "symfony/routing": "5.2.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aphiria\\Routing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Young",
+                    "email": "dave@aphiria.com",
+                    "role": "Architect"
+                }
+            ],
+            "description": "The Aphiria router library",
+            "homepage": "https://www.aphiria.com",
+            "keywords": [
+                "matching",
+                "php",
+                "router",
+                "routing"
+            ],
+            "support": {
+                "docs": "https://www.aphiria.com/docs/1.x/introduction.html",
+                "forum": "https://github.com/aphiria/aphiria/discussions",
+                "issues": "https://github.com/aphiria/aphiria/issues",
+                "source": "https://github.com/aphiria/aphiria"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/davidbyoung",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-08-01T18:23:16+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [
+        {
+            "package": "aphiria/reflection",
+            "version": "1.0.0.0-alpha4",
+            "alias": "v1.0.0",
+            "alias_normalized": "1.0.0.0"
+        },
+        {
+            "package": "aphiria/router",
+            "version": "1.0.0.0-alpha4",
+            "alias": "v1.0.0",
+            "alias_normalized": "1.0.0.0"
+        }
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "aphiria/router": 15,
+        "aphiria/reflection": 15
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}
