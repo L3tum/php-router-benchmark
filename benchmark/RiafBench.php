@@ -21,7 +21,7 @@ class RiafBench extends AbstractRouter
     #[BeforeMethods("getRouter")]
     public function benchStaticRoutes(array $params): void
     {
-        $handler = $this->router->matchRoute('GET', $params['route']);
+        $handler = $this->router->match('GET', $params['route']);
         assert($handler !== null);
     }
 
@@ -29,7 +29,7 @@ class RiafBench extends AbstractRouter
     #[BeforeMethods("getRouter")]
     public function benchDynamicRoutes(array $params): void
     {
-        $handler = $this->router->matchRoute('GET', $params['route']);
+        $handler = $this->router->match('GET', $params['route']);
         assert($handler !== null);
     }
 }
