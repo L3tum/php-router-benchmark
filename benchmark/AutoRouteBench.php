@@ -2,6 +2,8 @@
 
 namespace Benchmark;
 
+require_once dirname(__DIR__) . '/routers/autoroute/vendor/autoload.php';
+
 use AutoRoute\AutoRoute;
 use AutoRoute\Router;
 use PhpBench\Attributes\BeforeMethods;

@@ -2,6 +2,8 @@
 
 namespace Benchmark;
 
+require_once dirname(__DIR__) . '/routers/mezon/vendor/autoload.php';
+
 use Mezon\Router\Router;
 use PhpBench\Attributes\BeforeMethods;
 use PhpBench\Attributes\Groups;

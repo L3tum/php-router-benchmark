@@ -2,6 +2,8 @@
 
 namespace Benchmark;
 
+require_once dirname(__DIR__) . '/routers/fastroute/vendor/autoload.php';
+
 use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
 use PhpBench\Attributes\BeforeMethods;

@@ -2,6 +2,8 @@
 
 namespace Benchmark;
 
+require_once dirname(__DIR__) . '/routers/riaf/vendor/autoload.php';
+
 use PhpBench\Attributes\BeforeMethods;
 use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;

@@ -2,6 +2,8 @@
 
 namespace Benchmark;
 
+require_once dirname(__DIR__) . '/routers/bramus/vendor/autoload.php';
+
 use Bramus\Router\Router;
 use PhpBench\Attributes\BeforeMethods;
 use PhpBench\Attributes\Groups;

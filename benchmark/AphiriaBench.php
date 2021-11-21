@@ -2,6 +2,8 @@
 
 namespace Benchmark;
 
+require_once dirname(__DIR__) . '/routers/aphiria/vendor/autoload.php';
+
 use Aphiria\Routing\Builders\RouteCollectionBuilder;
 use Aphiria\Routing\Matchers\TrieRouteMatcher;
 use Aphiria\Routing\UriTemplates\Compilers\Tries\TrieFactory;
