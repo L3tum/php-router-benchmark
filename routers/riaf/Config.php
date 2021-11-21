@@ -8,7 +8,6 @@ use Riaf\Configuration\RouterCompilerConfiguration;
 
 class Config extends BaseConfiguration implements RouterCompilerConfiguration
 {
-
     public function getRouterNamespace(): string
     {
         return "Riaf";

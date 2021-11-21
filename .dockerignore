@@ -1,7 +1,8 @@
 **/vendor
+**/Generated
 .idea
 /routers/autoroute/resources/
 /routers/autoroute/src/
-/routers/riaf/src/Generated
 /routers/riaf/src/Router.php
 images
+caches

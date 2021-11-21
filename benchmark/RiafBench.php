@@ -4,19 +4,37 @@ namespace Benchmark;
 
 require_once dirname(__DIR__) . '/routers/riaf/vendor/autoload.php';
 
+use Config;
 use PhpBench\Attributes\BeforeMethods;
 use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
-use Riaf\Router;
+use Riaf\Compiler\Analyzer\StandardAnalyzer;
+use Riaf\Compiler\RouterCompiler;
+use Riaf\Metrics\Clock\SystemClock;
+use Riaf\Metrics\Timing;
+use Riaf\Routing\Route;
 
 #[Groups(["RouterBenchmark", "Router"])]
 class RiafBench extends AbstractRouter
 {
-    private Router $router;
+    private \Riaf\Router $router;
 
     public function getRouter(): void
     {
-        $this->router = new Router($this->container);
+        if (!class_exists("Riaf\Router")) {
+            $timing = new Timing(new SystemClock());
+            $compiler = new RouterCompiler(new StandardAnalyzer($timing), $timing, new Config());
+            $iterations = !empty(getenv('ROUTES')) ? getenv('ROUTES') : 100;
+            for ($i = 0; $i < $iterations; $i++) {
+                $compiler->addRoute(new Route("/static$i"), "riaf::static");
+                $compiler->addRoute(new Route("/dynamic$i/{id}", "GET", ["id" => "\d+"]), "riaf::dynamic");
+            }
+            $compiler->compile();
+            unset($compiler);
+            unset($timing);
+            require_once dirname(__DIR__) . "/routers/riaf/src/Router.php";
+        }
+        $this->router = new \Riaf\Router($this->container);
     }
 
     #[ParamProviders("provideStaticRoutes")]

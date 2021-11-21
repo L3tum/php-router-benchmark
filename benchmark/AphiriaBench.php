@@ -11,7 +11,7 @@ use PhpBench\Attributes\BeforeMethods;
 use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
 
-#[Groups(["RouterBenchmark", "Router"])]
+#[Groups(["Router"])]
 class AphiriaBench extends AbstractRouter
 {
     private TrieRouteMatcher $router;

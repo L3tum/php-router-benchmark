@@ -1,17 +1,17 @@
 all: prepare benchmark
 
 .PHONY: prepare
-prepare: clean vendor autoloader clean routers/riaf/src/Generated routers/riaf/src/Router.php routers/autoroute/src integration-autoloaders
+prepare: clean vendor autoloader routers/autoroute/src integration-autoloaders
 
 .PHONY: clean
 clean:
 	rm -rf vendor
+	rm -rf caches
+	mkdir -p caches
 	cd routers/autoroute && rm -rf vendor
 	cd routers/autoroute && rm -rf src
 	cd routers/autoroute && rm -rf resources
 	cd routers/riaf && rm -rf vendor
-	cd routers/riaf && rm -rf src/Generated
-	cd routers/riaf && rm -rf src/Router.php
 	cd routers/fastroute && rm -rf vendor
 	cd routers/symfony && rm -rf vendor
 	cd routers/altorouter && rm -rf vendor
@@ -61,14 +61,6 @@ benchmark-table:
 .PHONY: benchmark-routers
 benchmark-routers:
 	vendor/bin/phpbench run benchmark --report=all --group=Router
-
-routers/riaf/src/Router.php:
-	cd routers/riaf && composer dump-autoload
-	cd routers/riaf && php vendor/bin/compile "\\Config"
-
-routers/riaf/src/Generated:
-	cd routers/riaf/src && mkdir -p Generated
-	cd routers/riaf && composer generate
 
 routers/autoroute/src:
 	cd routers/autoroute && mkdir -p src

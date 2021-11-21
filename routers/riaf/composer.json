@@ -4,14 +4,8 @@
     "nyholm/psr7": "^1.4"
   },
   "autoload": {
-    "psr-4": {
-      "Riaf\\": "src/"
-    },
     "classmap": [
       "Config.php"
     ]
-  },
-  "scripts": {
-    "generate": "php ./generate_routes.php"
   }
 }
