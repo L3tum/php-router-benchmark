@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpFullyQualifiedNameUsageInspection */
 
 namespace Benchmark;
 
@@ -8,7 +8,6 @@ use Config;
 use PhpBench\Attributes\BeforeMethods;
 use PhpBench\Attributes\Groups;
 use PhpBench\Attributes\ParamProviders;
-use Riaf\Compiler\Analyzer\StandardAnalyzer;
 use Riaf\Compiler\RouterCompiler;
 use Riaf\Metrics\Clock\SystemClock;
 use Riaf\Metrics\Timing;
@@ -23,7 +22,7 @@ class RiafBench extends AbstractRouter
     {
         if (!class_exists("Riaf\Router")) {
             $timing = new Timing(new SystemClock());
-            $compiler = new RouterCompiler(new StandardAnalyzer($timing), $timing, new Config());
+            $compiler = new RouterCompiler(new Config());
             $iterations = !empty(getenv('ROUTES')) ? getenv('ROUTES') : 100;
             for ($i = 0; $i < $iterations; $i++) {
                 $compiler->addRoute(new Route("/static$i"), "riaf::static");
@@ -34,6 +33,7 @@ class RiafBench extends AbstractRouter
             unset($timing);
             require_once dirname(__DIR__) . "/routers/riaf/src/Router.php";
         }
+        /** @noinspection PhpFullyQualifiedNameUsageInspection */
         $this->router = new \Riaf\Router($this->container);
     }
 
